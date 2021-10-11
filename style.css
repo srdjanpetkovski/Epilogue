@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Source+Sans+Pro:wght@200;300;400&display=swap');
+
+:root {
+    --fontFamily: 'Source Sans Pro', sans-serif;
+    --fontSize: 18px;
+    --logo: 'Pacifico', cursive;
+    --white: #fff;
+    --background: #F4F4F4;
+    --padding: 100px 0;
+    --headings: #444444;
+    --text: #676767;
+    --red: #EF6480;
+    --transition: .3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--fontFamily);
+    font-size: var(--fontSize);
+    background: var(--background);
+    color: var(--text);
+    font-weight: 200;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--headings);
+}
+
+img {
+    width: 100%;
+}
+
+/********** header **********/
+
+header {
+    background-image: url(images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-family: var(--logo);
+    color: var(--white);
+    font-size: 4rem;
+    font-weight: 200;
+}
+
+header p {
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: var(--white);
+    letter-spacing: 0.325rem;
+}
+
+header hr {
+    width: 40%;
+    margin-top: 12px;
+    margin-bottom: 25px;
+}
+
+header a {
+    color: var(--white);
+}
+
+header a:hover {
+    color: var(--red);
+    text-decoration: none;
+}
+
+button {
+    font-size: 1rem;
+    background: transparent;
+    border: 2px solid var(--headings);
+    padding: 20px 40px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 4px;
+    margin-top: 30px;
+}
+
+button:hover {
+    color: var(--red);
+}
+
+/********** intro **********/
+
+.intro {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    background: var(--white);
+    text-align: center;
+    padding: 30px 200px;
+}
+
+.intro i {
+    border: 2px solid var(--text);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    font-size: 2.5rem;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+.intro h2 {
+    color: var(--headings);
+    font-size: 1.75rem;
+    letter-spacing: 0.375rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/********** blog **********/
+
+.blog {
+    padding: var(--padding);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+article {
+    flex: 0 0 48%;
+    background: var(--white);
+    padding-bottom: 55px;
+    margin-bottom: 40px;
+}
+
+.holder h3 {
+    position: relative;
+    top: -180px;
+    left: 140px;
+    color: var(--white);
+}
+
+.holder a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    letter-spacing: 0.375rem;
+}
+
+.text {
+    text-align: center;
+    padding: 0 60px;
+}
+
+.featured-image img {
+    border-radius: 5px 5px 0 0;
+}
+
+.blog a:hover {
+    transform: scale(1.1);
+    transition: .5s ease;
+}
+
+.holder {
+    overflow: hidden;
+}
+.blog a {
+    display: block;
+}
+
+/********** footer **********/
+
+footer {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+footer h2 {
+    font-size: 2rem;
+    letter-spacing: 0.375rem;
+    margin-bottom: 25px;
+}
+
+.underline {
+    margin-bottom: 50px;
+}
+
+footer a i {
+    color: var(--text);
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+footer p a {
+    color: var(--text);
+}
+
+footer p a:hover {
+    color: var(--red);
+    text-decoration: none;
+}
+
+/********** responsive **********/
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+        position: relative;
+        left: -35px;
+    }
+    header hr {
+        width: 65%;
+        margin-top: 12px;
+        margin-bottom: 25px;
+        position: relative;
+        left: -28px;
+    }
+    header p {font-size: 0.6rem;
+        padding: 0 80px;
+    }
+    .intro {
+        width: 75%;
+        padding: 25px 20px;
+        margin: 20px 13px;
+    }
+    .intro i {
+        width: 30px;
+        height: 30px;
+        font-size: 1.5rem;
+        padding: 20px;
+    }
+    .intro h2 {
+        color: var(--headings);
+        font-size: 1rem;
+        letter-spacing: 0.275rem;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .intro p {
+        font-size: 0.8rem;
+    }
+    button {
+        font-size: 0.8rem;padding: 20px 40px;
+        border-radius: 5px;
+        letter-spacing: 2px;
+        width: 80%;
+        padding: 10px 20px;
+    }
+
+    .blog {
+        padding-bottom: 30px;
+    }
+
+    article {
+        flex: 0 0 85%;
+        padding-bottom: 35px;
+        margin-bottom: 40px;
+        
+    }
+    .holder h3 {
+        position: relative;
+        top: -110px;
+        left: 35px;
+        font-size: 0.8rem;
+    }
+    .text {
+        padding: 0 25px;
+        font-size: 12px;
+    }
+    .text button {
+        width: 100%;
+    }
+    footer h2 {
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+    footer p {
+        font-size: 12px;
+    }
+    footer button {
+        width: 60%;
+    }
+}
